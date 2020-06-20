@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko-KR' }}">
+{% include head.html %}
+<body>
+    <main role="main">
+        <!-- header -->
+        {% include header.html %}
+        <!-- header -->
+
+        <!-- section -->
+        <section class="post-list">
+            <h2 class="d-none">Posts</h2>
+            <ul class="container-fluid">
+                {% for post in site.posts %}
+                <li class="row mb-0 mb-2 mb-sm-0">
+                    <div class="col-sm-auto mr-2">
+                        <div class="row">
+                            <span class="text-muted"><time datetime="{{ post.date }}">{{ post.date | date: '%b %d, %Y' }}</time></span>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row">
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <!-- section -->
+
+        <!-- footer -->
+        {% include footer.html %}
+        <!-- footer -->
+    </main>
+
+    {% include script.html %}
+</body>
+</html>
