@@ -13,9 +13,9 @@
             <ul class="container-fluid">
                 {% for post in site.posts %}
                 <li class="row mb-0 mb-2 mb-sm-0">
-                    <div class="col-sm-auto mr-2">
+                    <div class="col-sm-auto" style="width: 4.5rem;">
                         <div class="row">
-                            <span class="text-muted"><time datetime="{{ post.date }}">{{ post.date | date: '%b %d, %Y' }}</time></span>
+                            <span class="text-muted"><time datetime="{{ post.date }}">{{ post.date | date: '%Y.%m.%d' }}</time></span>
                         </div>
                     </div>
                     <div class="col-sm">
