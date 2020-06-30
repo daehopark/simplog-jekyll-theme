@@ -93,7 +93,7 @@ $ jekyll serve
 
 여기서는 `Github` 계정이 있다고 가정하겠습니다. `Repository` 생성 버튼을 누른 다음 `[사용자이름].github.io`이라는 이름으로 `Repository`를 생성합니다. 반드시 `[사용자이름].github.io`라는 이름으로 만드셔야 합니다.
 
-`Jekyll` 블로그 디렉토리로 가서 아래와 같이 입력하여 `Repository`에 `Jekyll` 프로젝트를 업로드합니다.
+터미널을 열고 `Jekyll` 프로젝트 디렉토리로 가서 아래와 같이 입력하여 `Repository`에 `Jekyll` 프로젝트를 업로드합니다.
 
 ```shell
 $ git init
