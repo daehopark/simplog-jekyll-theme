@@ -103,7 +103,7 @@ $ git remote add origin https://github.com/[사용자계정]/[사용자이름].g
 $ git push -u origin master
 ```
 
-`Repository`가 정상적으로 생성되었다면 `Jekyll` 프로젝트에 들어있는 모든 파일을 `Repository`에 업로드합니다. 정상적으로 업로드가 되었다면 [https://[사용자이름].github.io](https://[사용자이름].github.io)에 접속하여 `Jekyll` 블로그가 정상적으로 호스팅되는지 확인하면 됩니다!
+정상적으로 업로드가 되었다면 [https://[사용자이름].github.io](https://[사용자이름].github.io)에 접속하여 `Jekyll` 블로그가 정상적으로 호스팅되는지 확인하면 됩니다!
 
 ## References
 
