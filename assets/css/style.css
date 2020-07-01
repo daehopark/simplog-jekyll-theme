@@ -132,9 +132,10 @@ footer {
 
 .post > p > code {
     background: none;
-    padding: 0;
-    font-family: inherit;
+    /* padding: 0; */
+    /* font-family: inherit; */
     color: inherit;
+    opacity: 0.8;
 }
 
 .post > .post-title > h1 {
