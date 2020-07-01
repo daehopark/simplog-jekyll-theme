@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll 블로그 시작하기 1: 개발 환경 구축 및 Github 배포"
+title: "Jekyll 블로그 시작하기 1 - 개발 환경 구축 및 Github 배포"
 tags: ["jekyll"]
 ---
 
