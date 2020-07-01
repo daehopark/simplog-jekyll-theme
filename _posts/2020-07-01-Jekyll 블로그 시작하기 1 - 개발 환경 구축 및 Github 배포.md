@@ -91,7 +91,7 @@ $ jekyll serve
 
 `Github`에서 `Github Page`라는 서비스를 무료로 이용할 수 있습니다. `Github Page`는 `Repository`에 저장한 파일을 웹 페이지로 보여줄 수 있는 서비스입니다. 즉, 정적 웹 사이트를 구축할 수 있습니다.
 
-여기서는 `Github` 계정이 있다고 가정하겠습니다. `Repository` 생성 버튼을 누른 다음 `[사용자이름].github.io`이라는 이름으로 `Repository`를 생성합니다. 반드시 `[사용자이름].github.io`라는 이름으로 만드셔야 합니다.
+여기서는 `Github` 계정이 있다고 가정하겠습니다. `Repository` 생성 버튼을 누른 다음 `[username].github.io`이라는 이름으로 `Repository`를 생성합니다. 반드시 `[username].github.io`라는 이름으로 만드셔야 합니다.
 
 터미널을 열고 `Jekyll` 프로젝트 디렉토리로 가서 아래와 같이 입력하여 `Repository`에 `Jekyll` 프로젝트를 업로드합니다.
 
@@ -99,11 +99,11 @@ $ jekyll serve
 $ git init
 $ git add .
 $ git commit -m "publish jekyll blog"
-$ git remote add origin https://github.com/[사용자계정]/[사용자이름].github.io.git
+$ git remote add origin https://github.com/[username]/[username].github.io.git
 $ git push -u origin master
 ```
 
-정상적으로 업로드가 되었다면 [https://[사용자이름].github.io](https://[사용자이름].github.io)에 접속하여 `Jekyll` 블로그가 정상적으로 호스팅되는지 확인하면 됩니다!
+정상적으로 업로드가 되었다면 [https://[username].github.io](https://[username].github.io)에 접속하여 `Jekyll` 블로그가 정상적으로 호스팅되는지 확인하면 됩니다!
 
 ## References
 
