@@ -124,6 +124,9 @@ footer {
     width: 100%;
     border-collapse: collapse;
 }
+.post > table tr th {
+    text-align: center;
+}
 .post > table tr th,
 .post > table tr td {
     padding: 0.25rem;
@@ -132,8 +135,14 @@ footer {
 
 .post > p > code {
     background: none;
-    /* padding: 0; */
-    /* font-family: inherit; */
+    font-family: inherit;
+    color: inherit;
+    opacity: 0.8;
+}
+.post > table tr th > code,
+.post > table tr td > code {
+    background: none;
+    font-family: inherit;
     color: inherit;
     opacity: 0.8;
 }
