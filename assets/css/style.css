@@ -106,7 +106,7 @@ footer {
 .post blockquote {
     padding-left: 1rem;
     border-left: 0.25rem solid;
-    margin-left: -1rem;
+    margin-left: -0.25rem;
     opacity: 0.8;
 }
 .post ul,
