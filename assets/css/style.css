@@ -63,7 +63,9 @@ footer {
 
 
 /* post-list */
-
+.post-list time {
+    opacity: 0.8;
+}
 
 /* post */
 .post > * {
