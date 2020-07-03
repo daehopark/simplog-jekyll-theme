@@ -14,7 +14,7 @@
                 {% for post in site.posts %}
                 <li class="row mb-0 mb-2 mb-sm-0">
                     <a href="{{ post.url | relative_url }}">
-                        <time datetime="{{ post.date }}" class="pr-2">{{ post.date | date: '%Y.%m.%d' }}</time>
+                        <time datetime="{{ post.date }}">{{ post.date | date: '%Y.%m.%d' }}</time>
                         <span>{{ post.title }}</span>
                     </a>
                 </li>
