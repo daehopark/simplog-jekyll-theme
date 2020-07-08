@@ -153,6 +153,7 @@ footer {
 }
 
 .post>p>code {
+    padding: 0;
     background: none;
     font-family: inherit;
     color: inherit;
