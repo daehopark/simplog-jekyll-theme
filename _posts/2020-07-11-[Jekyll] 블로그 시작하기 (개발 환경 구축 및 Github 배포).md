@@ -1,10 +1,17 @@
 ---
 layout: post
-title: "[Jekyll] 개발 환경 구축 및 블로그 시작하기"
+title: "[Jekyll] 블로그 시작하기 (개발 환경 구축 및 Github 배포)"
 tags: ["jekyll"]
 ---
 
-`Jekyll`은 개인 또는 조직을 위한 정적 웹 사이트를 구축할 수 있는 오픈 소스입니다. 이번 장에서 `Jekyll`로 정적 웹 사이트를 개발하기 위핸 환경 구축과 블로그로써 `Jekyll` 프로젝트를 사용하는 법 그리고 `GitHub`에 직접 배포해보는 과정까지 함께 해보겠습니다.
+[Jekyll](https://jekyllrb.com/)은 정적 웹 사이트를 구축할 수 있는 오픈소스입니다. 실제로 많은 개인이나 단체들이 `Jekyll`을 사용하여 웹 사이트나 블로그를 운영하고 있습니다. 저 역시 개인 블로그를 운영하기 위해서 `Jekyll`을 사용하기로 했고, 그 과정을 공유하려고 합니다.
+
+이번 장에서 알아볼 소주제들은 다음과 같습니다.
+
+- Jekyll 개발 환경 구축
+- Jekyll 프로젝트 생성 및 구조 파악
+- Jekyll 블로그 시작
+- Github 배포
 
 ## Jekyll 개발 환경 구축
 
@@ -12,7 +19,7 @@ tags: ["jekyll"]
 
 ### Command-Line Tools
 
-터미널을 통해 `Command-Line Tools`를 설치합니다.
+터미널을 열고 아래와 같이 입력하여 `Command-Line Tools`를 설치합니다.
 
 ```shell
 $ xcode-select --install
@@ -24,7 +31,7 @@ $ xcode-select --install
 
 ### Homebrew 설치
 
-`Homebrew`를 설치합니다. `Homebrew`는 `Ruby`를 설치하기 위해 필요하며, 만약 `Homebrew`가 이미 설치되어 있다면 건너띄어도 괜찮습니다.
+[Homebrew](https://brew.sh/)를 설치합니다. `Homebrew`는 `Ruby`를 설치하기 위해 필요하며, 만약 `Homebrew`가 이미 설치되어 있다면 건너띄어도 괜찮습니다.
 
 ```shell
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -32,7 +39,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 ### Ruby 설치
 
-`Homebrew`를 사용하여 `Ruby`를 설치합니다.
+`Homebrew`를 사용하여 [Ruby](https://www.ruby-lang.org/)를 설치합니다.
 
 ```shell
 $ brew install ruby
@@ -71,9 +78,9 @@ $ jekyll -v
 jekyll 4.1.0
 ```
 
-## Jekyll 프로젝트 생성
+## Jekyll 프로젝트 생성 및 구조 파악
 
-터미널을 통해 `Jekyll` 프로젝트를 생성합니다. `--blank` 옵션을 주게되면 테마가 없는 빈 프로젝트가 생성됩니다.
+`Jekyll` 명령어를 사용하여 프로젝트를 생성합니다. `--blank` 옵션을 주게되면 테마가 없는 빈 프로젝트가 생성됩니다.
 
 ```shell
 $ jekyll new my-blog --blank
@@ -91,6 +98,8 @@ $ jekyll serve
 
 ### 디렉토리 구조
 
+프로젝트를 생성하면 아래와 같이 디렉토리가 구성됩니다. `_site`는 `Jekyll` 프로젝트를 실행하면 웹 사이트 구동에 필요한 모든 파일들이 동적으로 생성되는 디렉토리이므로 설명을 생략하겠습니다.
+
 ```shell
 .
 ├── _config.yml
@@ -100,7 +109,6 @@ $ jekyll serve
 ├── _layouts
 ├── _posts
 ├── _sass
-├── _site
 ├── assets
 └── index.md
 ```
@@ -109,18 +117,29 @@ $ jekyll serve
 |:-:|-|
 | _config.yml | 프로젝트에 사용될 환경 변수를 정의합니다. |
 | _data | 사용자 정의 데이터 파일을 관리합니다. |
-| _drafts | 아직 배포하지 않을 포스트들을 관리합니다. |
+| _drafts | 아직 배포하고 싶지 않은 포스트들을 관리합니다. |
 | _includes | 레이아웃에 공통적으로 사용하는 HTML 파일을 관리합니다. |
 | _layouts | 레이아웃을 정의한 HTML 파일을 관리합니다. |
-| _posts | 배포된 포스트들을 관리합니다. |
-| _sass | `sass` 확장자 파일을 관리합니다. |
-| _site | 웹 사이트 구동에 필요한 정적 파일들이 생성되는 디렉토리입니다. |
-| assets | `css`, `js`와 같은 정적 파일들을 관리합니다. |
+| _posts | 배포할 포스트들을 관리합니다. |
+| _sass | SASS 파일을 관리합니다. |
+| assets | 웹 사이트 구동에 필요한 정적 파일들을 관리합니다. |
 | index.md | Index 페이지를 정의합니다. |
 
-## Jekyll 블로그 시작하기
+## Jekyll 블로그 시작
 
-본격적으로 `Jekyll` 블로그를 시작하려고 합니다. 제일 먼저 레이아웃 파일을 작성해야합니다. 홈 화면에서는 포스트 리스트를 화면에 출력하고 포스트를 클릭하면 포스트 상세 화면으로 넘어갈 수 있도록 레이아웃을 정의합니다. 대략적으로 아래와 같은 형태로 레이아웃 파일을 정의할 수 있습니다.
+본격적으로 `Jekyll` 블로그를 시작하려고 합니다. 홈 화면에서는 포스트 리스트를 출력하고 포스트를 클릭하면 상세 화면으로 이동할 수 있도록 레이아웃을 구성합니다.
+
+`index.md` 파일을 열고 아래와 같이 수정합니다. `_layouts/home.html` 파일에 정의된 레이아웃을 사용하겠다는 의미입니다.
+
+```markdown
+---
+layout: home
+---
+```
+
+### 레이아웃
+
+레이아웃은 블로그마다 다른 형태를 지니겠지만 기본적으로 아래와 같은 형태를 지닙니다.
 
 {% raw %}
 ```html
@@ -136,11 +155,11 @@ $ jekyll serve
 ```
 {% endraw %}
 
-공통적으로 사용하는 `HTML` 파일들은 `_includes` 디렉토리 하위에서 관리하면 코드의 중복을 방지하고 유지보수에 유리합니다.
+공통적으로 사용하는 파일들은 `_includes` 디록토리 하위에서 관리할 수 있습니다. 이는 코드의 중복을 방지하고 유지보수에 유리하도록 합니다.
 
 ### home.html
 
-`_layouts` 디렉토리 하위에 `home.html` 파일을 생성하고 위에서 정의한 템플릿을 복사하여 붙여넣습니다. `<-- main -->` 부분에다 아래처럼 작성하여 포스트 리스트를 홈 화면에 출력할 수 있도록 합니다.
+`_layouts` 디렉토리 하위에 `home.html` 파일을 생성합니다. 위에서 정의한 템플릿을 복사한 뒤 `<-- main -->` 부분을 아래처럼 수정합니다.
 
 {% raw %}
 ```html
@@ -154,19 +173,9 @@ $ jekyll serve
 ```
 {% endraw %}
 
-### index.md
-
-사용자가 웹 사이트에 접속할 때 홈 화면을 바라볼 수 있도록 `index.md` 파일을 아래처럼 작성합니다.
-
-```markdown
----
-layout: home
----
-```
-
 ### post.html
 
-`_layouts` 디렉토리 하위에 `post.html` 파일을 생성하고 위에서 정의한 템플릿을 복사하여 붙여넣습니다. `<-- main -->` 부분에다 아래처럼 작성하여 포스트 상세 화면을 출력할 수 있도록 합니다. `content`는 사용자가 작성한 포스트가 바인딩됩니다.
+`_layouts` 디렉토리 하위에 `post.html` 파일을 생성합니다. 위에서 정의한 템플릿을 복사한 뒤 `<-- main -->` 부분을 아래처럼 수정합니다.
 
 {% raw %}
 ```html
@@ -177,9 +186,9 @@ layout: home
 ```
 {% endraw %}
 
-## 포스트 작성
+### 포스트 작성
 
-포스트는 `_posts` 디렉토리 하위에 `YYYY-MM-DD-POST-TITLE.md`와 같은 형태의 파일로 관리할 수 있습니다. 형식에 맞추어 파일을 생성한 다음 아래처럼 포스트를 작성합니다.
+포스트는 `_posts` 디렉토리 하위에 `YYYY-MM-DD-POST-TITLE.md`와 같은 형태의 파일로 관리할 수 있습니다. `_layouts/post.html` 파일에 정의된 레이아웃을 사용할 수 있도록 명시하고 간단한 내용을 아래처럼 기입합니다.
 
 ```markdown
 ---
@@ -190,19 +199,17 @@ title: Hello World!
 Hello World!
 ```
 
-`layout` 변수에 `post`라고 작성한 이유는 위에서 `post.html`로 포스트 상세 화면 레이아웃을 정의했기 때문입니다. `title`은 `post.html`에서 `page.title`과 같은 형태로 변수를 바인딩할 수 있습니다. 그밖의 포스트 변수에 대한 자세한 설명은 [https://jekyllrb.com/docs/front-matter/](https://jekyllrb.com/docs/front-matter/)를 참조하시면 됩니다.
-
-터미널을 열고 프로젝트의 루트 디렉토리로 이동하여 아래와 같이 입력합니다. `_site` 디렉토리 하위에 웹 사이트 구동에 필요한 모든 정적 파일들이 생성되면서 웹 서버가 구동됩니다.
+터미널을 열고 프로젝트의 루트 디렉토리로 이동하여 프로젝트를 실행합니다.
 
 ```shell
 $ jekyll serve
 ```
 
-[http://localhost:4000/](http://localhost:4000/)로 접속하여 홈 화면에 작성한 포스트가 있는지 확인합니다. 해당 포스트를 클릭하여 상세 화면으로 넘어가는지도 확인할 수 있습니다.
+[http://localhost:4000/](http://localhost:4000/)로 접속하여 홈 화면에 작성한 포스트가 있는지 확인합니다. 해당 포스트를 클릭하여 상세 화면으로 넘어가는지도 확인합니다.
 
 ### draft 작성
 
-아직 배포하고 싶지 않은 포스트는 `_drafts` 디렉토리 하위에 `POST-TITLE.md`와 같은 형태의 파일로 관리할 수 있습니다. 배포되지 않기 때문에 `jekyll serve` 명령을 사용하더라도 `_site` 디레고리 하위에 정적 파일로 생성되지 않습니다. 로컬 환경에서 해당 포스트를 확인하고 싶다면 아래와 같이 입력하면 됩니다.
+아직 배포하고 싶지 않은 포스트는 `_drafts` 디렉토리 하위에 `POST-TITLE.md`와 같은 형태의 파일로 관리할 수 있습니다. 배포되지 않기 때문에 `jekyll serve` 명령을 사용하더라도 `_site` 디렉토리 하위에 파일로 생성되지 않습니다. 로컬 환경에서 해당 포스트를 확인하고 싶다면 아래와 같이 입력하면 됩니다.
 
 ```shell
 $ jekyll serve --draft
@@ -210,7 +217,7 @@ $ jekyll serve --draft
 
 ## Github 배포
 
-`Github`에서 `Github Page`라는 서비스를 무료로 이용할 수 있습니다. `Github Page`는 `Repository`에 저장한 파일을 웹 페이지로 보여줄 수 있는 서비스입니다. 즉, 정적 웹 사이트를 구축할 수 있습니다.
+[Github](https://github.com/)에서 `Github Page`라는 서비스를 무료로 이용할 수 있습니다. `Github Page`는 `Repository`에 저장한 파일을 웹 페이지로 보여줄 수 있는 서비스입니다. 즉, 정적 웹 사이트를 구축할 수 있습니다.
 
 `Repository` 생성 버튼을 누른 다음 `[username].github.io`이라는 이름으로 `Repository`를 생성합니다. 반드시 `[username].github.io`라는 이름으로 만드셔야 합니다.
 
