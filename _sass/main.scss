@@ -172,15 +172,12 @@ footer {
     opacity: 0.8;
 }
 
-.post>.post-title>h1 {
+.post>.post-title {
     margin-bottom: 0;
     font-size: 1.3rem;
     font-weight: 700;
 }
 
-.post>.post-title .publish-time {
-    display: block;
+.post>.post-info {
     font-size: 0.8rem;
-    font-weight: normal;
-    opacity: 0.8;
 }
