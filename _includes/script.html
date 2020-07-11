@@ -8,3 +8,8 @@
 
 <!-- Disqus -->
 <script id="dsq-count-scr" src="//dhparkhub-github-io.disqus.com/count.js" async></script>
+
+<!-- Naver Analytics -->
+{% if jekyll.environment == 'production' %}
+{% include naver-analytics.html %}
+{% endif %}
