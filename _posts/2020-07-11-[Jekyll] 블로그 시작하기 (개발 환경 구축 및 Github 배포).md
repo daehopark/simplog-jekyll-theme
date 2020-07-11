@@ -32,7 +32,7 @@ $ xcode-select --install
 
 ### Homebrew 설치
 
-[Homebrew](https://brew.sh/)를 설치합니다. `Homebrew`는 `Ruby`를 설치하기 위해 필요하며, 만약 `Homebrew`가 이미 설치되어 있다면 건너띄어도 괜찮습니다.
+[Homebrew](https://brew.sh/)를 설치합니다. `Homebrew`는 `Ruby`를 설치하기 위해 필요하며, 만약 `Homebrew`가 이미 설치되어 있다면 건너뛰어도 괜찮습니다.
 
 ```shell
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -119,7 +119,7 @@ $ jekyll serve
 | _config.yml | 프로젝트에 사용될 환경 변수를 정의합니다. |
 | _data | 사용자 정의 데이터 파일을 관리합니다. |
 | _drafts | 아직 배포하고 싶지 않은 포스트들을 관리합니다. |
-| _includes | 레이아웃에 공통적으로 사용하는 HTML 파일을 관리합니다. |
+| _includes | 레이아웃에 공통으로 사용하는 HTML 파일을 관리합니다. |
 | _layouts | 레이아웃을 정의한 HTML 파일을 관리합니다. |
 | _posts | 배포할 포스트들을 관리합니다. |
 | _sass | SASS 파일을 관리합니다. |
@@ -156,7 +156,7 @@ layout: home
 ```
 {% endraw %}
 
-공통적으로 사용하는 파일들은 `_includes` 디록토리 하위에서 관리할 수 있습니다. 이는 코드의 중복을 방지하고 유지보수에 유리하도록 합니다.
+공통으로 사용하는 파일들은 `_includes` 디렉토리 하위에서 관리할 수 있습니다. 이는 코드의 중복을 방지하고 유지보수에 유리하도록 합니다.
 
 ### home.html
 
@@ -189,7 +189,7 @@ layout: home
 
 ### 포스트 작성
 
-포스트는 `_posts` 디렉토리 하위에 `YYYY-MM-DD-POST-TITLE.md`와 같은 형태의 파일로 관리할 수 있습니다. `_layouts/post.html` 파일에 정의된 레이아웃을 사용할 수 있도록 명시하고 간단한 내용을 아래처럼 기입합니다.
+포스트는 `_posts` 디렉토리 하위에 `YYYY-MM-DD-POST-TITLE.md`와 같은 형태의 파일로 관리할 수 있습니다. `_layouts/post.html` 파일에 정의된 레이아웃을 사용할 수 있도록 명시하고 간단한 내용을 아래처럼 작성합니다.
 
 ```markdown
 ---
@@ -218,21 +218,26 @@ $ jekyll serve --draft
 
 ## Github 배포
 
-[Github](https://github.com/)에서 `Github Page`라는 서비스를 무료로 이용할 수 있습니다. `Github Page`는 `Repository`에 저장한 파일을 웹 페이지로 보여줄 수 있는 서비스입니다. 즉, 정적 웹 사이트를 구축할 수 있습니다.
+[Github](https://github.com/)은 `Jekyll`로 웹 사이트를 구축할 수 있는 [Github Page](https://pages.github.com/)를 제공합니다. 위에서 실습한 `Jekyll` 프로젝트를 `GitHub`에 배포해보도록 하겠습니다.
 
-`Repository` 생성 버튼을 누른 다음 `[username].github.io`이라는 이름으로 `Repository`를 생성합니다. 반드시 `[username].github.io`라는 이름으로 만드셔야 합니다.
+`GitHub`에서 `create a new repository` 버튼을 클릭하여 `[username].github.io`라는 이름의 저장소를 생성합니다. 반드시 자신의 `username`을 사용하여 `[username].github.io`라는 이름으로 생성해야 합니다.
 
-터미널을 열고 `Jekyll` 프로젝트 디렉토리로 가서 아래와 같이 입력하여 `Repository`에 `Jekyll` 프로젝트를 업로드합니다.
+터미널을 통해 생성한 저장소를 가져온 뒤 해당 디렉토리로 이동합니다.
 
 ```shell
-$ git init
-$ git add .
+$ git clone https://github.com/[username]/[username].github.io
+$ cd [username].github.io
+```
+
+위에서 생성한 `Jekyll` 프로젝트를 모두 복사한 다음 원격 저장소에 업로드합니다.
+
+```shell
+$ git add --all
 $ git commit -m "publish jekyll blog"
-$ git remote add origin https://github.com/[username]/[username].github.io.git
 $ git push -u origin master
 ```
 
-정상적으로 업로드가 되었다면 [https://[username].github.io](https://[username].github.io)에 접속하여 `Jekyll` 블로그가 정상적으로 호스팅되는지 확인하면 됩니다! 사이트가 구동되는 데에 시간이 조금 걸릴 수는 있습니다.
+정상적으로 업로드가 되었다면 [https://[username].github.io](https://[username].github.io)에 접속하여 `Jekyll` 블로그가 정상적으로 호스팅 되는지 확인하면 됩니다! 사이트가 구동되는 데에 시간이 조금 걸릴 수 있습니다.
 
 ## References
 
