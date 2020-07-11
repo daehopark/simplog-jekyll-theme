@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Simplog Style Guide"
+comments: false
 ---
 
 ## Heading Level 2

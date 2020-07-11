@@ -17,6 +17,12 @@
         </section>
         <!-- section -->
 
+        <!-- disqus -->
+        {% if page.comments == true %}
+        {% include disqus.html %}
+        {% endif %}
+        <!-- disqus -->
+
         <!-- footer -->
         {% include footer.html %}
         <!-- footer -->

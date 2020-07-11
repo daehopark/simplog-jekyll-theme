@@ -2,6 +2,7 @@
 layout: post
 title: "[Jekyll] 블로그 시작하기 (개발 환경 구축 및 Github 배포)"
 tags: ["jekyll"]
+comments: true
 ---
 
 [Jekyll](https://jekyllrb.com/)은 정적 웹 사이트를 구축할 수 있는 오픈소스입니다. 실제로 많은 개인이나 단체들이 `Jekyll`을 사용하여 웹 사이트나 블로그를 운영하고 있습니다. 저 역시 개인 블로그를 운영하기 위해서 `Jekyll`을 사용하기로 했고, 그 과정을 공유하려고 합니다.
