@@ -2,4 +2,4 @@ url: "https://dhparkhub.github.io" # the base hostname & protocol for your site,
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Simplog" # the name of your site
 lang: "ko-KR" # the locale information of your site
-permalink: /:title # title only
+permalink: /posts/:title # title only
