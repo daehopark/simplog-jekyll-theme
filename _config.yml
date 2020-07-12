@@ -1,5 +1,9 @@
+# General
 url: "https://dhparkhub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Simplog" # the name of your site
 lang: "ko-KR" # the locale information of your site
 permalink: /post/:title # title only
+
+# Anylytics
+google-analytics: UA-172441174-1
