@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko-KR' }}">
+{% include head.html %}
+<body>
+    <main role="main">
+        <!-- header -->
+        {% include header.html %}
+        <!-- header -->
+
+        <!-- section -->
+        <section class="post">
+            <h1 class="d-none">Tags</h1>
+
+            {% assign tags = '' | split: '' %}
+            {% for tag in site.tags %}
+                {% assign tagName = tag | first | split: ' ' %}
+                {% assign tags = tags | concat: tagName %}
+            {% endfor %}
+            {% assign tags = tags | sort %}
+
+            {% for tag in tags %}
+            <h2 id="{{ tag }}" class="text-capitalize">{{ tag }}</h3>
+            <ul>
+                {% for post in site.tags[tag] %}
+                <li>
+                    <a href="{{ post.url | relative_url }}"><span>{{ post.title }}</span></a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </section>
+        <!-- section -->
+
+        <!-- disqus -->
+        {% if page.comments == true %}
+        {% include disqus.html %}
+        {% endif %}
+        <!-- disqus -->
+
+        <!-- footer -->
+        {% include footer.html %}
+        <!-- footer -->
+    </main>
+
+    {% include script.html %}
+</body>
+</html>
