@@ -1,12 +1,12 @@
 <head>
-    {% if jekyll.environment == 'production' %}
-    {% include google-analytics.html %}
-    {% endif %}
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    {% if jekyll.environment == 'production' %}
+    {% include google-analytics.html %}
+    {% endif %}
 
     <!-- Naver Search Advisor -->
     <meta name="naver-site-verification" content="ab0c557daf37a74c09dc570b121a8c669d63d687" />
