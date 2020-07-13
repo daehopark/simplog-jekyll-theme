@@ -25,7 +25,7 @@ title: "Tags"
 {% raw %}
 ```html
 {% for tag in site.tags %}
-<h2>{{ tag[0]}} </h2>
+<h2>{{ tag[0] }} </h2>
 {% endfor %}
 ```
 {% endraw %}
@@ -37,7 +37,7 @@ title: "Tags"
 {% raw %}
 ```html
 {% for tag in site.tags %}
-<h2>{{ tag[0]}} </h2>
+<h2>{{ tag[0] }} </h2>
 <ul>
     {% for post in tag[1] %}
     <li>
@@ -55,7 +55,7 @@ title: "Tags"
 ```html
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
-<h2>{{ tag[0]}} </h2>
+<h2>{{ tag[0] }} </h2>
 <ul>
     {% for post in tag[1] %}
     <li>
