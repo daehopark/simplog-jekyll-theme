@@ -9,9 +9,17 @@
     {% endif %}
 
     <!-- Naver Search Advisor -->
-    <meta name="naver-site-verification" content="ab0c557daf37a74c09dc570b121a8c669d63d687" />
+    <meta name="naver-site-verification" content="ab0c557daf37a74c09dc570b121a8c669d63d687">
 
     <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="description" content="{{ site.title }}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+    <meta property="og:description" content="{{ site.title }}">
+    <meta property="og:image" content="{{ '/favicon.png' | prepend: site.url | prepend: site.baseurl }}">
+    <meta property="og:url" content="{{ page.url | prepend: site.url | prepend: site.baseurl }}">
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
