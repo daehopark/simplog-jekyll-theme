@@ -77,3 +77,8 @@ layout: post
 comments: true # comments can be disabled by setting false
 ---
 ```
+
+## References
+
+- [Install instructions for Jekyll](https://disqus.com/admin/install/platforms/jekyll/)
+- [Disqus를 이용하여 Jekyll에 댓글기능 추가하기](https://17billion.github.io/jekyll/disqus/reply/2017/06/01/jekyll_disqus.html)
