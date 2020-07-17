@@ -13,7 +13,7 @@ comments: true
 
 사이트 생성이 완료되면 좌측 상단의 `Install Disqus` 메뉴를 클릭한 다음 `Jekyll` 플랫폼을 클릭합니다. `Jekyll` 플랫폼에서 `Disqus`를 설치하는 방법이 나오는데 아래쪽에 `Universal Embed Code` 링크를 클릭합니다.
 
-아래와 비슷한 코드가 보이면 `Jekyll` 프로젝트의 `_includes` 디렉토리 하위에 `disqus.html` 파일을 하나 만들고 아래 코드를 복사합니다.
+아래와 비슷한 코드가 보이면 `Jekyll` 프로젝트의 `_includes` 디렉토리 하위에 `disqus.html` 파일을 하나 만들고 복사합니다. 바로 아래에 보이는 제 코드를 복사하려면 `s.src` 할당문의 경로를 자신의 `Disqus` 사이트 경로로 수정해야 합니다. 
 
 ```html
 <div id="disqus_thread"></div>
