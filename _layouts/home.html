@@ -13,9 +13,15 @@
             <ul class="container-fluid">
                 {% for post in site.posts %}
                 <li class="row mb-0 mb-2 mb-sm-0">
-                    <a href="{{ post.url | relative_url }}">
-                        <time datetime="{{ post.date }}">{{ post.date | date: '%Y.%m.%d' }}</time>
-                        <span>{{ post.title }}</span>
+                    <a href="{{ post.url | relative_url }}" class="container-fluid">
+                        <div class="row">
+                            <div class="col-auto p-0 pr-2">
+                                <time datetime="{{ post.date }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+                            </div>
+                            <div class="col p-0">
+                                <span>{{ post.title }}</span>
+                            </div>
+                        </div>
                     </a>
                 </li>
                 {% endfor %}
