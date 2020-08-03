@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[AWS] Java SDK를 사용하여 CloudWatch에 Custom Metric Data를 배포하는 Lambda 개발"
-tags: ["aws"]
+tags: ["AWS"]
 comments: true
 ---
 
