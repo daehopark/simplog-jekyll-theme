@@ -96,7 +96,7 @@ public Cookie build() {
 }
 ```
 
-완성된 `CookieBuilder` 클래스는 다음과 같다. 
+완성된 `CookieBuilder` 클래스는 다음과 같다.
 
 ```java
 public class CookieBuilder {
