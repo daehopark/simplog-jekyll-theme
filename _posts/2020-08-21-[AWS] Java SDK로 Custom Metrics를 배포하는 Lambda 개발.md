@@ -5,11 +5,11 @@ tags: ["aws", "lambda", "java"]
 comments: true
 ---
 
-시스템을 운영하다가 서비스의 연속성을 위해 각 `WAS`와 `DB` 간의 `Active Connection` 개수를 실시간으로 모니터링할 일이 생겼다. 각 `WAS`에서 실시간으로 `Active Connection`의 개수를 가지고 `Lambda`를 호출하면 `Lambda`는 `Custom Metrics`를 배포해서 `CloudWatch`에서 데이터를 모니터링할 수 있겠다는 생각이 들었다.
+시스템을 운영하다가 서비스의 연속성을 위해 각 `WAS`와 `DB` 간의 `Active Connection` 개수를 실시간으로 모니터링할 일이 생겼다. 각 `WAS`에서 실시간으로 `Active Connection`의 개수를 가지고 `Lambda`를 호출하면 `Lambda`는 `Custom Metrics`를 배포해서 `CloudWatch`에서 데이터를 실시간으로 모니터링할 수 있지 않을까.
 
 ## Lambda 호출
 
-각 `WAS`에서는 [MBeanInfo](https://docs.oracle.com/javase/8/docs/api/javax/management/MBeanInfo.html)을 사용해서 `Active Connection`의 개수를 가지고 `Lambda`를 1초마다 호출합니다. 대략적인 코드는 다음과 같습니다.
+각 `WAS`에서는 [MBeanInfo](https://docs.oracle.com/javase/8/docs/api/javax/management/MBeanInfo.html)을 사용해서 `Active Connection`의 개수를 가지고 `Lambda`를 1초마다 호출한다. 대략적인 코드는 다음과 같다.
 
 ```java
 @Scheduled(fixedDelay = 1000)
@@ -40,7 +40,7 @@ comments: true
 
 ## Lambda
 
-`Lambda`는 호출을 받으면 `CloudWatchClient` 객체를 사용하여 `Custom Metrics`를 배포합니다. 데이터를 `Map<String, String>` 형태로 받고 결과값을 `String`으로 반환해야되기 때문에 `RequestHandler<Map<String, String>, String>`를 상속해서 `Handler` 클래스를 구현합니다.
+데이터를 `Map<String, String>` 형태로 받고 결과값을 `String`으로 반환해야되기 때문에 `RequestHandler<Map<String, String>, String>`를 상속해서 `Handler` 클래스를 구현한다. `Lambda`가 호출을 받으면 `CloudWatchClient` 객체를 사용해서 `Custom Metrics`를 배포할 수 있따.
 
 ```java
 public class Handler implements RequestHandler<Map<String, String>, String> {
@@ -87,7 +87,7 @@ public class Handler implements RequestHandler<Map<String, String>, String> {
 }
 ```
 
-`MetricDatum`은 기본적으로 60초 동안 집계된 데이터의 통계를 보여주게 되는데 1초마다 데이터를 찍고 싶으면 반드시 `Storage Resolution`의 값을 `1`로 설정해야 합니다.
+`MetricDatum`은 기본적으로 60초 동안 집계된 데이터의 통계를 보여주게 되는데 1초마다 데이터를 찍고 싶으면 반드시 `Storage Resolution`의 값을 `1`로 설정해야 한다.
 
 ## References
 
