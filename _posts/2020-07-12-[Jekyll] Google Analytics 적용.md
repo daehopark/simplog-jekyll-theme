@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Jekyll] Google Analytics 적용"
-tags: ["jekyll"]
+tags: ["Jekyll"]
 comments: true
 ---
 

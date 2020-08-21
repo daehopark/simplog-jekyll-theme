@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Jekyll] Tag Archive 페이지 개발"
-tags: ["jekyll"]
+tags: ["Jekyll"]
 comments: true
 ---
 

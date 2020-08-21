@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Simplog Style Guide"
-tags: ["simplog"]
+title: "SimpLog Style Guide"
+tags: ["SimpLog"]
 comments: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Java] Builder Pattern을 사용하여 CookieBuilder 클래스 설계"
-tags: ["java"]
+tags: ["Java"]
 comments: true
 ---
 
