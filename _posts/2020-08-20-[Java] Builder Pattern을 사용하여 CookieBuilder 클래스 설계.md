@@ -20,12 +20,12 @@ cookie.setSecure(true);
 
 ```java
 Cookie cookie = new CookieBuilder("name", "value")
-        .domain("domain.com")
-        .path("/path")
-        .maxAge(3600)
-        .httpOnly(true)
-        .secure(true)
-        .build();
+    .domain("domain.com")
+    .path("/path")
+    .maxAge(3600)
+    .httpOnly(true)
+    .secure(true)
+    .build();
 ```
 
 분명 좋은 `Builder Pattern`을 제공하는 라이브러리가 있겠지만, 공부도 할겸 한 번 `CookieBuilder`를 구현해보기로 했다.
@@ -36,20 +36,20 @@ Cookie cookie = new CookieBuilder("name", "value")
 
 ```java
 public class CookieBuilder {
-    private final String name;
-    private final String value;
-    private String domain;
-    private String path;
-    private int maxAge = -1;
-    private boolean secure;
-    private boolean httpOnly;
+  private final String name;
+  private final String value;
+  private String domain;
+  private String path;
+  private int maxAge = -1;
+  private boolean secure;
+  private boolean httpOnly;
 
-    public CookieBuilder(String name, String value) {
-        this.name = name;
-        this.value = value;
-    }
+  public CookieBuilder(String name, String value) {
+    this.name = name;
+    this.value = value;
+  }
 
-    /* method */
+  /* method */
 }
 ```
 
@@ -57,28 +57,28 @@ public class CookieBuilder {
 
 ```java
 public CookieBuilder domain(String domain) {
-    this.domain = domain;
-    return this;
+  this.domain = domain;
+  return this;
 }
 
 public CookieBuilder path(String path) {
-    this.path = path;
-    return this;
+  this.path = path;
+  return this;
 }
 
 public CookieBuilder secure(boolean secure) {
-    this.secure = secure;
-    return this;
+  this.secure = secure;
+  return this;
 }
 
 public CookieBuilder httpOnly(boolean httpOnly) {
-    this.httpOnly = httpOnly;
-    return this;
+  this.httpOnly = httpOnly;
+  return this;
 }
 
 public CookieBuilder maxAge(int maxAge) {
-    this.maxAge = maxAge;
-    return this;
+  this.maxAge = maxAge;
+  return this;
 }
 ```
 
@@ -86,13 +86,13 @@ public CookieBuilder maxAge(int maxAge) {
 
 ```java
 public Cookie build() {
-    Cookie cookie = new Cookie(name, value);
-    cookie.setDomain(domain);
-    cookie.setPath(path);
-    cookie.setMaxAge(maxAge);
-    cookie.setSecure(secure);
-    cookie.setHttpOnly(httpOnly);
-    return cookie;
+  Cookie cookie = new Cookie(name, value);
+  cookie.setDomain(domain);
+  cookie.setPath(path);
+  cookie.setMaxAge(maxAge);
+  cookie.setSecure(secure);
+  cookie.setHttpOnly(httpOnly);
+  return cookie;
 }
 ```
 
@@ -100,53 +100,53 @@ public Cookie build() {
 
 ```java
 public class CookieBuilder {
-    private final String name;
-    private final String value;
-    private String domain;
-    private String path;
-    private int maxAge = -1;
-    private boolean secure;
-    private boolean httpOnly;
+  private final String name;
+  private final String value;
+  private String domain;
+  private String path;
+  private int maxAge = -1;
+  private boolean secure;
+  private boolean httpOnly;
 
-    public CookieBuilder(String name, String value) {
-        this.name = name;
-        this.value = value;
-    }
+  public CookieBuilder(String name, String value) {
+    this.name = name;
+    this.value = value;
+  }
 
-    public CookieBuilder domain(String domain) {
-        this.domain = domain;
-        return this;
-    }
+  public CookieBuilder domain(String domain) {
+    this.domain = domain;
+    return this;
+  }
 
-    public CookieBuilder path(String path) {
-        this.path = path;
-        return this;
-    }
+  public CookieBuilder path(String path) {
+    this.path = path;
+    return this;
+  }
 
-    public CookieBuilder secure(boolean secure) {
-        this.secure = secure;
-        return this;
-    }
+  public CookieBuilder secure(boolean secure) {
+    this.secure = secure;
+    return this;
+  }
 
-    public CookieBuilder httpOnly(boolean httpOnly) {
-        this.httpOnly = httpOnly;
-        return this;
-    }
+  public CookieBuilder httpOnly(boolean httpOnly) {
+    this.httpOnly = httpOnly;
+    return this;
+  }
 
-    public CookieBuilder maxAge(int maxAge) {
-        this.maxAge = maxAge;
-        return this;
-    }
+  public CookieBuilder maxAge(int maxAge) {
+    this.maxAge = maxAge;
+    return this;
+  }
 
-    public Cookie build() {
-        Cookie cookie = new Cookie(name, value);
-        cookie.setDomain(domain);
-        cookie.setPath(path);
-        cookie.setMaxAge(maxAge);
-        cookie.setSecure(secure);
-        cookie.setHttpOnly(httpOnly);
-        return cookie;
-    }
+  public Cookie build() {
+    Cookie cookie = new Cookie(name, value);
+    cookie.setDomain(domain);
+    cookie.setPath(path);
+    cookie.setMaxAge(maxAge);
+    cookie.setSecure(secure);
+    cookie.setHttpOnly(httpOnly);
+    return cookie;
+  }
 }
 ```
 
@@ -154,12 +154,12 @@ public class CookieBuilder {
 
 ```java
 Cookie cookie = new CookieBuilder("name", "value")
-        .domain("domain.com")
-        .path("/path")
-        .maxAge(3600)
-        .httpOnly(true)
-        .secure(true)
-        .build();
+    .domain("domain.com")
+    .path("/path")
+    .maxAge(3600)
+    .httpOnly(true)
+    .secure(true)
+    .build();
 ```
 
 ## References

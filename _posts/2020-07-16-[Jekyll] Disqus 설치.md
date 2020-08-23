@@ -13,7 +13,7 @@ comments: true
 
 사이트 생성이 완료되면 좌측 상단의 `Install Disqus` 메뉴를 클릭한 다음 `Jekyll` 플랫폼을 클릭합니다. `Jekyll` 플랫폼에서 `Disqus`를 설치하는 방법이 나오는데 아래쪽에 `Universal Embed Code` 링크를 클릭합니다.
 
-아래와 비슷한 코드가 보이면 `Jekyll` 프로젝트의 `_includes` 디렉토리 하위에 `disqus.html` 파일을 하나 만들고 복사합니다. 바로 아래에 보이는 제 코드를 복사하려면 `s.src` 할당문의 경로를 자신의 `Disqus` 사이트 경로로 수정해야 합니다. 
+아래와 비슷한 코드가 보이면 `Jekyll` 프로젝트의 `_includes` 디렉토리 하위에 `disqus.html` 파일을 하나 만들고 복사합니다. 바로 아래에 보이는 제 코드를 복사하려면 `s.src` 할당문의 경로를 자신의 `Disqus` 사이트 경로로 수정해야 합니다.
 
 ```html
 <div id="disqus_thread"></div>
@@ -29,10 +29,10 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 };
 */
 (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://my-awesome-site.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
+  var d = document, s = d.createElement('script');
+  s.src = 'https://my-awesome-site.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
@@ -43,8 +43,8 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 {% raw %}
 ```js
 var disqus_config = function () {
-    this.page.url = `{{ page.url | absolute_url }}`;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = `{{ page.url | absolute_url }}`; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  this.page.url = `{{ page.url | absolute_url }}`;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = `{{ page.url | absolute_url }}`; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 ```
 {% endraw %}
