@@ -39,11 +39,11 @@ title: "Tags"
 {% for tag in site.tags %}
 <h2>{{ tag[0] }}</h2>
 <ul>
-    {% for post in tag[1] %}
-    <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
+  {% for post in tag[1] %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
 </ul>
 {% endfor %}
 ```
@@ -57,11 +57,11 @@ title: "Tags"
 {% for tag in tags %}
 <h2>{{ tag[0] }}</h2>
 <ul>
-    {% for post in tag[1] %}
-    <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
+  {% for post in tag[1] %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
 </ul>
 {% endfor %}
 ```

@@ -26,11 +26,11 @@ google-analytics: [tracking-id]
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', '{{ site.google-analytics }}');
+gtag('config', '{{ site.google-analytics }}');
 </script>
 ```
 {% endraw %}
@@ -40,8 +40,8 @@ google-analytics: [tracking-id]
 {% raw %}
 ```html
 <head>
-    {% include google-analytics.html %}
-    <!-- more -->
+  {% include google-analytics.html %}
+  <!-- more -->
 </head>
 ```
 {% endraw %}
@@ -51,10 +51,10 @@ google-analytics: [tracking-id]
 {% raw %}
 ```html
 <head>
-    {% if jekyll.environment == 'production' %}
-    {% include google-analytics.html %}
-    {% endif %}
-    <!-- more -->
+  {% if jekyll.environment == 'production' %}
+  {% include google-analytics.html %}
+  {% endif %}
+  <!-- more -->
 </head>
 ```
 {% endraw %}
