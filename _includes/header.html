@@ -1,17 +1,26 @@
 <header class="container-fluid">
-    <nav role="navigation" class="row">
-        <div class="col-auto align-self-end mr-3">
-            <div class="row justify-content-start">
-                <a href="{{ '/' | relative_url }}" class="blog-title">{{ site.title }}</a>
-            </div>
-        </div>
-        <div class="col align-self-end">
-            <div class="row justify-content-end">
-                <ul class="menu-list">
-                    <li class="d-inline text-muted"><a href="{{ '/about' | relative_url }}">About</a></li>
-                    <li class="d-inline text-muted"><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav role="navigation" class="row">
+    <div class="col-auto align-self-end mr-3">
+      <div class="row justify-content-start">
+        <a href="{{ '/' | relative_url }}" class="blog-title"
+          >{{ site.title }}</a
+        >
+      </div>
+    </div>
+    <div class="col align-self-end">
+      <div class="row justify-content-end">
+        <ul class="menu-list">
+          <li class="d-inline text-muted">
+            <a href="{{ '/algorithm' | relative_url }}">Algorithm</a>
+          </li>
+          <li class="d-inline text-muted">
+            <a href="{{ '/about' | relative_url }}">About</a>
+          </li>
+          <li class="d-inline text-muted">
+            <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>

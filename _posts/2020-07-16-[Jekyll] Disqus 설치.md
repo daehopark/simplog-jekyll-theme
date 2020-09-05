@@ -18,41 +18,53 @@ comments: true
 ```html
 <div id="disqus_thread"></div>
 <script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 */
-(function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://my-awesome-site.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-})();
+  (function() {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement("script");
+    s.src = "https://my-awesome-site.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
 ```
 
 코드 중간에 `disqus_config`라는 변수가 주석 처리되어 있는데 주석을 제거하고 아래처럼 코드를 수정합니다.
 
 {% raw %}
+
 ```js
-var disqus_config = function () {
-  this.page.url = `{{ page.url | absolute_url }}`;  // Replace PAGE_URL with your page's canonical URL variable
+var disqus_config = function() {
+  this.page.url = `{{ page.url | absolute_url }}`; // Replace PAGE_URL with your page's canonical URL variable
   this.page.identifier = `{{ page.url | absolute_url }}`; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 ```
+
 {% endraw %}
 
 위의 코드가 있던 페이지에서 스크롤을 살짝 내리면 아래와 같은 코드가 보입니다.
 
 ```html
-<script id="dsq-count-scr" src="//my-awesome-site.disqus.com/count.js" async></script>
+<script
+  id="dsq-count-scr"
+  src="//my-awesome-site.disqus.com/count.js"
+  async
+></script>
 ```
 
 레이아웃을 정의한 페이지의 `</body>` 태그 바로 위에 추가합니다.
@@ -60,13 +72,13 @@ var disqus_config = function () {
 이제 거의 다 왔습니다. 레이아웃을 정의한 페이지의 적당한 위치에 아래와 같이 코드를 작성하여 `disqus.html`을 삽입합니다.
 
 {% raw %}
+
 ```html
 <!-- disqus -->
-{% if page.comments == true %}
-{% include disqus.html %}
-{% endif %}
+{% if page.comments == true %} {% include disqus.html %} {% endif %}
 <!-- disqus -->
 ```
+
 {% endraw %}
 
 조건문을 사용한 이유는 댓글 기능을 사용할 포스트나 페이지를 선택할 수 있게 하기 위한 것입니다. 포스트나 페이지를 작성할 때 댓글 기능을 사용하고 싶으면 아래처럼 코드를 작성해주면 됩니다.

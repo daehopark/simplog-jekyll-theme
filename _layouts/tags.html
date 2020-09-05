@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'ko-KR' }}">
-{% include head.html %}
-<body>
+  {% include head.html %}
+  <body>
     <main role="main">
-        <!-- header -->
-        {% include header.html %}
-        <!-- header -->
+      <!-- header -->
+      {% include header.html %}
+      <!-- header -->
 
-        <!-- section -->
-        <section class="post">
-            <h1 class="d-none">Tags</h1>
-            {% assign tags = site.tags | sort %}
-            {% for tag in tags %}
-            <h2 id="{{ tag[0] }}" class="text-capitalize">{{ tag[0] }}</h3>
-            <ul>
-                {% for post in tag[1] %}
-                <li>
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-            {% endfor %}
-        </section>
-        <!-- section -->
+      <!-- section -->
+      <section class="post">
+        <h1 class="d-none">Tags</h1>
+        {% assign tags = site.tags | sort %} {% for tag in tags %}
+        <h2 id="{{ tag[0] }}" class="text-capitalize">{{ tag[0] }}</h2>
+        <ul>
+          {% for post in tag[1] %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+      </section>
+      <!-- section -->
 
-        <!-- disqus -->
-        {% if page.comments == true %}
-        {% include disqus.html %}
-        {% endif %}
-        <!-- disqus -->
+      <!-- disqus -->
+      {% if page.comments == true %} {% include disqus.html %} {% endif %}
+      <!-- disqus -->
 
-        <!-- footer -->
-        {% include footer.html %}
-        <!-- footer -->
+      <!-- footer -->
+      {% include footer.html %}
+      <!-- footer -->
     </main>
 
     {% include script.html %}
-</body>
+  </body>
 </html>

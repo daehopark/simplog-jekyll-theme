@@ -91,5 +91,5 @@ public class Handler implements RequestHandler<Map<String, String>, String> {
 
 ## References
 
--   [AWS Lambda function handler in Java](https://docs.aws.amazon.com/lambda/latest/dg/java-handler.html)
--   [Publishing Custom Metric Data](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/examples-cloudwatch-publish-custom-metrics.html)
+- [AWS Lambda function handler in Java](https://docs.aws.amazon.com/lambda/latest/dg/java-handler.html)
+- [Publishing Custom Metric Data](https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/examples-cloudwatch-publish-custom-metrics.html)

@@ -22,41 +22,51 @@ google-analytics: [tracking-id]
 `_includes` 디렉토리 하위에 `google-analytics.html` 파일을 생성하고 제공받은 `Tracking Code`를 복사합니다. `Tracking Code` 중에서 `Tracking ID`가 할당된 부분은 위에서 선언한 환경 변수로 바인딩해줍니다.
 
 {% raw %}
+
 ```html
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}"
+></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-gtag('config', '{{ site.google-analytics }}');
+  gtag("config", "{{ site.google-analytics }}");
 </script>
 ```
+
 {% endraw %}
 
 `Google Analytics`는 `Tracking Code`의 삽입 위치를 `<head>` 태그의 가장 윗부분에 넣을 것을 권장하고 있습니다.
 
 {% raw %}
+
 ```html
 <head>
   {% include google-analytics.html %}
   <!-- more -->
 </head>
 ```
+
 {% endraw %}
 
 이제 `Jekyll` 프로젝트를 실행하고 웹 사이트에 접속하면 `Tracking Code`가 적용된 것을 확인할 수 있습니다. 만약 운영 환경 데이터만 측정하길 원하신다면 아래와 같이 조건문을 사용할 수도 있습니다.
 
 {% raw %}
+
 ```html
 <head>
-  {% if jekyll.environment == 'production' %}
-  {% include google-analytics.html %}
-  {% endif %}
+  {% if jekyll.environment == 'production' %} {% include google-analytics.html
+  %} {% endif %}
   <!-- more -->
 </head>
 ```
+
 {% endraw %}
 
 모든 작업이 완료되었습니다. 이제 `Google Analytics` 페이지에서 ~~전세계~~ 사람들이 제 블로그에 방문하는 것을 확인할 수 있습니다!

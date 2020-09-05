@@ -7,3 +7,9 @@ permalink: /post/:title # title only
 
 # Anylytics
 google-analytics: UA-172441174-1
+
+# Collections
+collections:
+  algorithm:
+    output: true
+    permalink: /algorithm/:title

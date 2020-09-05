@@ -6,9 +6,13 @@ comments: false
 ---
 
 ## Heading Level 2
+
 ### Heading Level 3
+
 #### Heading Level 4
+
 ##### Heading Level 5
+
 ###### Heading Level 6
 
 ## Paragraph
@@ -24,8 +28,8 @@ comments: false
 - unordered list item
 - unordered list item
 - unordered list item
-    - unordered list item
-    - unordered list item
+  - unordered list item
+  - unordered list item
 - unordered list item
 
 ## Ordered List
@@ -33,8 +37,8 @@ comments: false
 1. ordered list item
 2. ordered list item
 3. ordered list item
-    1. ordered list item
-    2. ordered list item
+   1. ordered list item
+   2. ordered list item
 4. ordered list item
 
 ## Quote
@@ -60,8 +64,8 @@ class Solution {
 
 ## Table
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+| Tables   |      Are      |   Cool |
+| -------- | :-----------: | -----: |
+| col 1 is | left-aligned  | \$1600 |
+| col 2 is |   centered    |   \$12 |
+| col 3 is | right-aligned |    \$1 |
