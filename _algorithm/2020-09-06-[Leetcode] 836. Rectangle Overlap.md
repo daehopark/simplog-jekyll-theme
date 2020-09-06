@@ -10,7 +10,7 @@ comments: true
 - Rec1 x1 >= Rec2 x2
 - Rec1 x2 <= Rec2 x1
 - Rec1 y1 >= Rec2 y2
-- Rec1 y2 >= Rec2 y1
+- Rec1 y2 <= Rec2 y1
 
 위 조건들이 아닌 경우에 `true`를 반환하면 된다.
 
