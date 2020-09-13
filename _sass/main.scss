@@ -1,183 +1,193 @@
 * {
-    position: relative;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: 'Noto Sans Korean', sans-serif;
-    font-weight: 350;
+  font-family: 'Noto Sans Korean', sans-serif;
+  font-weight: 350;
 }
 
 ul, ol, dl {
-    margin: 0;
+  margin: 0;
 }
 
 a, a:hover {
-    color: inherit;
+  color: inherit;
 }
 
 main {
-    max-width: 42rem;
-    padding: 0 1rem;
-    margin: 0 auto;
+  max-width: 42rem;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 
 /* header */
 header {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #efefef;
-    margin: 1.5rem 0 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #efefef;
+  margin: 1.5rem 0 0;
 }
 
 header .blog-title {
-    font-size: 1.2rem;
-    font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 header .blog-title:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 header .menu-list>li {
-    margin-right: .25rem;
+  margin-right: .25rem;
 }
 
 header .menu-list>li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 header .menu-list a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* section */
 section {
-    margin: 1.5rem 0 0;
+  margin: 1.5rem 0 0;
 }
 
 /* footer */
 footer {
-    margin: 1rem 0 1.5rem;
-    font-size: 0.8rem;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.8rem;
 }
 
 /* post-list */
 .post-list time {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* post */
 .post>* {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .post>h1 {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .post>h2 {
-    margin-top: 1.4rem;
-    font-size: 1.2rem;
+  margin-top: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .post>h3 {
-    margin-top: 1.2rem;
-    font-size: 1.1rem;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .post>h4 {
-    font-size: 1.0rem;
+  font-size: 1.0rem;
 }
 
 .post>h5 {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .post>h6 {
-    font-size: 0.9rem;
-    opacity: 0.8;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 .post>p {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .post a {
-    opacity: 0.8;
-    text-decoration: underline;
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .post a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .post blockquote {
-    padding: 1rem 0 1rem 1rem;
-    border-left: 0.25rem solid;
-    margin-left: -0.25rem;
-    background: #fafafa;
-    color: #999999;
+  padding: 1rem 0 1rem 1rem;
+  border-left: 0.25rem solid;
+  margin-left: -0.25rem;
+  background: #fafafa;
+  color: #999999;
 }
 .post blockquote p {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .post ul,
 .post ol,
 .post dl {
-    padding-left: 1.4rem;
+  padding-left: 1.4rem;
 }
 
 .post pre {
-    padding: 0.5rem;
-    margin: 0 0 1rem;
-    font-size: 0.8rem;
+  padding: 0.5rem;
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
 }
 
 .post>table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .post>table tr th {
-    text-align: center;
+  text-align: center;
 }
 
 .post>table tr th,
 .post>table tr td {
-    padding: 0.25rem;
-    border: 1px solid;
+  padding: 0.25rem;
+  border: 1px solid;
 }
 
 .post>p>code {
-    padding: 0;
-    background: none;
-    font-family: inherit;
-    color: inherit;
-    opacity: 0.8;
+  padding: 0;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  opacity: 0.8;
+}
+
+.post>ul>li>code,
+.post>ol>li>code,
+.post>dl>li>code {
+  padding: 0;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  opacity: 0.8;
 }
 
 .post>table tr th>code,
 .post>table tr td>code {
-    background: none;
-    font-family: inherit;
-    color: inherit;
-    opacity: 0.8;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  opacity: 0.8;
 }
 
 .post>.post-title {
-    margin-bottom: 0;
-    font-size: 1.3rem;
-    font-weight: 700;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .post>.post-info {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
