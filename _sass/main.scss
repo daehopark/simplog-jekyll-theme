@@ -109,6 +109,10 @@ footer {
   font-size: 0.9rem;
 }
 
+.post>p>img {
+  max-width: 100%;
+}
+
 .post a {
   opacity: 0.8;
   text-decoration: underline;
