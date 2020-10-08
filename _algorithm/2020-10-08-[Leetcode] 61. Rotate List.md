@@ -12,8 +12,8 @@ comments: true
 ```java
 List<Integer> list = new ArrayList<>();
 while (head != null) {
-    list.add(head.val);
-    head = head.next;
+  list.add(head.val);
+  head = head.next;
 }
 
 k %= list.size();
@@ -25,13 +25,13 @@ k %= list.size();
 ListNode headNode = null;
 ListNode tempNode = null;
 for (int i = 0; i < list.size(); i++) {
-    int index = (list.size() - k + i) % list.size();
-    if (headNode == null) {
-        headNode = tempNode = new ListNode(list.get(index));
-        continue;
-    }
-    tempNode.next = new ListNode(list.get(index));
-    tempNode = tempNode.next;
+  int index = (list.size() - k + i) % list.size();
+  if (headNode == null) {
+    headNode = tempNode = new ListNode(list.get(index));
+    continue;
+  }
+  tempNode.next = new ListNode(list.get(index));
+  tempNode = tempNode.next;
 }
 ```
 
@@ -39,33 +39,33 @@ for (int i = 0; i < list.size(); i++) {
 
 ```java
 class Solution {
-    public ListNode rotateRight(ListNode head, int k) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-
-        List<Integer> list = new ArrayList<>();
-        while (head != null) {
-            list.add(head.val);
-            head = head.next;
-        }
-
-        k %= list.size();
-
-        ListNode headNode = null;
-        ListNode tempNode = null;
-        for (int i = 0; i < list.size(); i++) {
-            int index = (list.size() - k + i) % list.size();
-            if (headNode == null) {
-                headNode = tempNode = new ListNode(list.get(index));
-                continue;
-            }
-            tempNode.next = new ListNode(list.get(index));
-            tempNode = tempNode.next;
-        }
-
-        return headNode;
+  public ListNode rotateRight(ListNode head, int k) {
+    if (head == null || head.next == null) {
+      return head;
     }
+
+    List<Integer> list = new ArrayList<>();
+    while (head != null) {
+      list.add(head.val);
+      head = head.next;
+    }
+
+    k %= list.size();
+
+    ListNode headNode = null;
+    ListNode tempNode = null;
+    for (int i = 0; i < list.size(); i++) {
+      int index = (list.size() - k + i) % list.size();
+      if (headNode == null) {
+        headNode = tempNode = new ListNode(list.get(index));
+        continue;
+      }
+      tempNode.next = new ListNode(list.get(index));
+      tempNode = tempNode.next;
+    }
+
+    return headNode;
+  }
 }
 ```
 
@@ -75,26 +75,26 @@ class Solution {
 
 ```java
 class Solution {
-    public ListNode rotateRight(ListNode head, int k) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-
-        List<ListNode> list = new ArrayList<>();
-        while (true) {
-            list.add(head);
-            if (head.next == null) {
-                head.next = list.get(0);
-                break;
-            }
-            head = head.next;
-        }
-
-        k %= list.size();
-        int headIndex = (list.size() - k) % list.size();
-        int tailIndex = headIndex != 0 ? headIndex - 1 : list.size() - 1;
-        list.get(tailIndex).next = null;
-        return list.get(headIndex);
+  public ListNode rotateRight(ListNode head, int k) {
+    if (head == null || head.next == null) {
+      return head;
     }
+
+    List<ListNode> list = new ArrayList<>();
+    while (true) {
+      list.add(head);
+      if (head.next == null) {
+        head.next = list.get(0);
+        break;
+      }
+      head = head.next;
+    }
+
+    k %= list.size();
+    int headIndex = (list.size() - k) % list.size();
+    int tailIndex = headIndex != 0 ? headIndex - 1 : list.size() - 1;
+    list.get(tailIndex).next = null;
+    return list.get(headIndex);
+  }
 }
 ```
