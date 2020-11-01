@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Algorithm] 2개의 스택(Stack)으로 큐(Queue) 구현"
-tags: ["algorithm"]
+title: "2개의 스택(Stack)으로 큐(Queue) 구현"
+tags: ["java"]
 comments: true
 ---
 

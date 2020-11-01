@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Web] Apache Http Client 예제"
+title: "Apache Http Client 예제"
 tags: ["web"]
 comments: true
 ---

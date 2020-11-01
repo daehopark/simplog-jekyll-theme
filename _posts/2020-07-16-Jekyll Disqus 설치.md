@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jekyll] Disqus 설치"
+title: "Jekyll Disqus 설치"
 tags: ["Jekyll"]
 comments: true
 ---

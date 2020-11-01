@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jekyll] Tag Archive 페이지 개발"
+title: "Jekyll Tag Archive 페이지 개발"
 tags: ["Jekyll"]
 comments: true
 ---
