@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Apache Http Client 예제"
-tags: ["web"]
+tags: ["Web", "Java"]
 comments: true
 ---
 
