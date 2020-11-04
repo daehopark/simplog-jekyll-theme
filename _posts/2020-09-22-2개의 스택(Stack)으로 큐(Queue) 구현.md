@@ -25,14 +25,11 @@ public void push(int e) {
 
 ```java
 public int pop() {
-  if (!stack2.isEmpty()) {
-    return stack2.pop();
+  if (stack2.empty()) {
+    while (!stack1.isEmpty()) {
+      stack2.push(stack1.pop());
+    }
   }
-
-  while (!stack1.isEmpty()) {
-    stack2.push(stack1.pop());
-  }
-
   return stack2.pop();
 }
 ```
@@ -51,14 +48,11 @@ public class CustomQueue {
   }
 
   public int pop() {
-    if (!stack2.isEmpty()) {
-      return stack2.pop();
+    if (stack2.empty()) {
+      while (!stack1.isEmpty()) {
+        stack2.push(stack1.pop());
+      }
     }
-
-    while (!stack1.isEmpty()) {
-      stack2.push(stack1.pop());
-    }
-
     return stack2.pop();
   }
 }
