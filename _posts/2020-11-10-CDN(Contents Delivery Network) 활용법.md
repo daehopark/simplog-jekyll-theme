@@ -2,7 +2,7 @@
 layout: post
 title: "CDN(Contents Delivery Network) 활용법"
 tags: ["Web", "Network"]
-comments: false
+comments: true
 ---
 
 안녕하세요, 오늘은 `CDN(Content Delivery Network)`에 대해 얘기해보려고 합니다. 회사에서 인프라 관련 업무를 맡다보니 자연스럽게 `CDN`을 접할 수 있게 되었는데,
