@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CDN(Contents Delivery Network) 활용법"
-tags: ["Web", "Network"]
+tags: ["Network", "Web"]
 comments: true
 ---
 
@@ -20,7 +20,7 @@ comments: true
 
 왼쪽 그림에서 하얀색 서버는 `Origin Server`를 나타내며 모든 최종 사용자는 `Origin Server`와 통신하여 컨텐츠를 응답받을 수 있습니다. 때문에 `Origin Server`와의 거리가 먼 최종 사용자는 늦은 응답을 받을 수도 있습니다.
 
-오른쪽 그림에서 주황색 서버는 `Edge Server`를 나타내며 지리적으로 넓게 분포되어 있습니다. 최종 사용자는 `Origin Server`와 직접 통신하지 않고 지리적으로 가장 가까운 `Edge Server`와  통신하여 컨텐츠를 응답받을 수 있습니다.
+오른쪽 그림에서 주황색 서버는 `Edge Server`를 나타내며 지리적으로 넓게 분포되어 있습니다. 최종 사용자는 `Origin Server`와 직접 통신하지 않고 지리적으로 가장 가까운 `Edge Server`와 통신하여 컨텐츠를 응답받을 수 있습니다.
 
 ## CDN 활용법
 

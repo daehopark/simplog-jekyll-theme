@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Java SDK로 Custom Metrics를 배포하는 Lambda 개발"
-tags: ["AWS", "Lambda", "Java"]
+tags: ["AWS", "Java", "Lambda"]
 comments: true
 ---
 
