@@ -45,7 +45,7 @@ www.service.com/b -> service-b-origin.com
 
 `Static Caching`을 사용할 때 특정 파일을 지정할 수도 있지만 주로 확장자(`.html`, `css`, `.js`)를 지정하여 많이 사용합니다. 또한 주기를 설정할 수도 있고 주기가 끝나지 않더라도 `Purge API`를 통해 언제든 파일을 최신본으로 유지할 수 있습니다.
 
-## Dynamic Caching
+### Dynamic Caching
 
 `Dynamic Caching`은 주로 동적으로 변하는 컨텐츠를 대상으로 사용합니다. 최종 사용자가 최초로 컨텐츠를 요청하면 `Edge Server`는 사용자를 대신하여 `Origin Server`로부터 컨텐츠를 요청하게 되는데, `Origin Server`로부터 응답받은 컨텐츠는 설정된 주기 동안 `Edge Server`에서 캐싱하고 있기 때문에 다음 사용자부터는 자체적으로 컨텐츠를 응답할 수 있게 됩니다.
 
