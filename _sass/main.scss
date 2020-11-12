@@ -168,9 +168,9 @@ footer {
   opacity: 0.8;
 }
 
-.post>ul>li>code,
-.post>ol>li>code,
-.post>dl>li>code {
+.post>ul>li code,
+.post>ol>li code,
+.post>dl>li code {
   padding: 0;
   background: none;
   font-family: inherit;
