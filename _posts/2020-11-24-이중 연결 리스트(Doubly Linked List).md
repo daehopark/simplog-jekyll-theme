@@ -305,15 +305,5 @@ public class LinkedList {
     size--;
     return ret;
   }
-
-  public void display() {
-    StringBuilder sb = new StringBuilder();
-    Node temp = head;
-    while (temp != null) {
-      sb.append(temp.getData()).append(" ");
-      temp = temp.getNext();
-    }
-    System.out.println(sb.toString());
-  }
 }
 ```
