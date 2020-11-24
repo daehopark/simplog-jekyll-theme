@@ -15,34 +15,34 @@ comments: true
 
 ```java
 public class Node {
-    private int data;
-    private Node next;
+  private int data;
+  private Node next;
 
-    public Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
+  public Node(int data) {
+    this.data = data;
+    this.next = null;
+  }
 
-    public Node(int data, Node next) {
-        this.data = data;
-        this.next = next;
-    }
+  public Node(int data, Node next) {
+    this.data = data;
+    this.next = next;
+  }
 
-    public int getData() {
-        return data;
-    }
+  public int getData() {
+    return data;
+  }
 
-    public void setData(int data) {
-        this.data = data;
-    }
+  public void setData(int data) {
+    this.data = data;
+  }
 
-    public Node getNext() {
-        return next;
-    }
+  public Node getNext() {
+    return next;
+  }
 
-    public void setNext(Node next) {
-        this.next = next;
-    }
+  public void setNext(Node next) {
+    this.next = next;
+  }
 }
 ```
 
@@ -50,24 +50,24 @@ public class Node {
 
 ```java
 public class LinkedList {
-    private Node head;
-    private int size;
+  private Node head;
+  private int size;
 
-    public LinkedList();
-    public boolean empty();
-    public int size();
-    public int head();
-    public void pushFront(int data);
-    public int popFront();
+  public LinkedList();
+  public boolean empty();
+  public int size();
+  public int head();
+  public void pushFront(int data);
+  public int popFront();
 }
 ```
 
 ### Fields
 
-| Name | Description |
-|:-:|-|
+| Name | Description                               |
+| :--: | ----------------------------------------- |
 | head | 리스트의 최신 노드를 참조하는 `HEAD` 노드 |
-| size | 리스트의 사이즈 |
+| size | 리스트의 사이즈                           |
 
 ### Constructor
 
@@ -75,8 +75,8 @@ public class LinkedList {
 
 ```java
 public LinkedList() {
-    this.head = null;
-    this.size = 0;
+  this.head = null;
+  this.size = 0;
 }
 ```
 
@@ -86,7 +86,7 @@ public LinkedList() {
 
 ```java
 public boolean empty() {
-    return size == 0;// or head == null
+  return size == 0;// or head == null
 }
 ```
 
@@ -96,7 +96,7 @@ public boolean empty() {
 
 ```java
 public int size() {
-    return size;
+  return size;
 }
 ```
 
@@ -106,10 +106,10 @@ public int size() {
 
 ```java
 public int head() {
-    if (empty()) {
-        throw new NoSuchElementException();
-    }
-    return head.getData();
+  if (empty()) {
+    throw new NoSuchElementException();
+  }
+  return head.getData();
 }
 ```
 
@@ -119,8 +119,8 @@ public int head() {
 
 ```java
 public void pushFront(int data) {
-    head = new Node(data, head);
-    size++;
+  head = new Node(data, head);
+  size++;
 }
 ```
 
@@ -130,10 +130,10 @@ public void pushFront(int data) {
 
 ```java
 public int popFront() {
-    int ret = head();// if empty, throw exception
-    head = head.getNext();
-    size--;
-    return ret;
+  int ret = head();// if empty, throw exception
+  head = head.getNext();
+  size--;
+  return ret;
 }
 ```
 
@@ -141,51 +141,51 @@ public int popFront() {
 
 `LinkedList` 클래스의 각 메서드의 시간 복잡도는 다음과 같습니다.
 
-| Method | Time Complexity |
-|:-:|:-:|
-| empty() | O(1) |
-| size() | O(1) |
-| head() | O(1) |
-| pushFront() | O(1) |
-| popFront() | O(1) |
+|   Method    | Time Complexity |
+| :---------: | :-------------: |
+|   empty()   |      O(1)       |
+|   size()    |      O(1)       |
+|   head()    |      O(1)       |
+| pushFront() |      O(1)       |
+| popFront()  |      O(1)       |
 
 ## Full Source Code
 
 ```java
 public class LinkedList {
-    private Node head;
-    private int size;
+  private Node head;
+  private int size;
 
-    public LinkedList() {
-        this.head = null;
-        this.size = 0;
-    }
+  public LinkedList() {
+    this.head = null;
+    this.size = 0;
+  }
 
-    public boolean empty() {
-        return size == 0;// or head == null
-    }
+  public boolean empty() {
+    return size == 0;// or head == null
+  }
 
-    public int size() {
-        return size;
-    }
+  public int size() {
+    return size;
+  }
 
-    public int head() {
-        if (empty()) {
-            throw new NoSuchElementException();
-        }
-        return head.getData();
+  public int head() {
+    if (empty()) {
+      throw new NoSuchElementException();
     }
+    return head.getData();
+  }
 
-    public void pushFront(int data) {
-        head = new Node(data, head);
-        size++;
-    }
+  public void pushFront(int data) {
+    head = new Node(data, head);
+    size++;
+  }
 
-    public int popFront() {
-        int ret = head();// if empty, throw exception
-        head = head.getNext();
-        size--;
-        return ret;
-    }
+  public int popFront() {
+    int ret = head();// if empty, throw exception
+    head = head.getNext();
+    size--;
+    return ret;
+  }
 }
 ```
